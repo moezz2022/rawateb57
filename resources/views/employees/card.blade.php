@@ -475,7 +475,7 @@
                 <div class="card-header d-flex justify-content-between align-items-center bg-light">
                     <h3 class="card-title mb-0 d-flex align-items-center">
                         <i class="fa-solid fa-id-card ml-2"></i>
-                         محجؤشيسوبميبسمرةسيمكالبطاقة المهنية - الوجه الأمامي
+                        البطاقة المهنية - الوجه الأمامي
                     </h3>
                     <div class="btn-group">
                         <button onclick="window.location.href='{{ url('/cards/select-grade') }}'" type="button"
