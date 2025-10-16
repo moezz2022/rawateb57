@@ -571,12 +571,17 @@
                                             </div>
 
                                             <div class="photo-section">
-                                                <div class="photo" id="photo-container-{{ $employee->id }}">
-                                                    <span class="photo-placeholder">صورة<br>الموظف</span>
+                                                <div class="photo" id="photo-container-{{ $employee->id }}"> <span
+                                                        class="photo-placeholder">صورة<br>الموظف</span>
+                                                    <!-- أيقونة الكاميرا --> <button type="button"
+                                                        class="upload-icon d-print-none"
+                                                        onclick="uploadImage({{ $employee->id }})"> <i
+                                                            class="fa fa-camera"></i> </button> <!-- مدخل اختيار الصورة -->
+                                                    <input type="file" accept="image/*"
+                                                        id="file-input-{{ $employee->id }}" style="display:none;">
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- التذييل -->
                                         <div class="page-footer">
                                             <div class="barcode-section">
