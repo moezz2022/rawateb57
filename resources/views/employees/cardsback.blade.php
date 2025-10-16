@@ -446,42 +446,51 @@
                         </button>
                     </div>
                 </div>
+
                 <div class="document">
                     @foreach ($employees->chunk(10) as $group)
-                        <div class="cards-grid">
-                            @foreach ($group as $employee)
-                                <div class="card-container-back">
-                                    <!-- زخرفة العلم -->
-                                    <div class="flag-decoration-back">
-                                        <svg width="100%" height="100%" viewBox="0 0 300 100"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0" y="0" width="200" height="20" fill="#006e2e"
-                                                transform="rotate(-45 0 0)" />
-                                            <rect x="0" y="20" width="200" height="20" fill="#d50000"
-                                                transform="rotate(-45 0 0)" />
-                                        </svg>
-                                    </div>
-                                    <!-- رأس البطاقة -->
-                                    <div class="back-header d-flex justify-content-between align-items-center">
-                                        <!-- الشعار الأيسر -->
-                                        <div class="dz-logo left-logo">
-                                            <img src="{{ asset('assets/img/brand/Algeria.png') }}" alt="DZ Logo Left">
-                                        </div>
-                                        <!-- النص في المنتصف -->
-                                        <div class="back-subtitle text-center flex-grow-1">
-                                            IDDZA{{ $employee->MATRI ?? '' }} >>> {{ $employee->NOM ?? '' }} <<<
-                                                {{ $employee->PRENOM ?? '' }} <<<
-                                                {{ $employee->DATNAIS ? \Carbon\Carbon::parse($employee->DATNAIS)->format('Ymd') : '' }}
-                                                <<<< </div>
-                                                <!-- الشعار الأيمن -->
-                                                <div class="dz-logo right-logo">
+                        @php
+                            // إذا كان عدد البطاقات فردي نضيف بطاقة فارغة لتكملة الصفحة
+                            if ($group->count() % 2 != 0) {
+                                $group->push((object) []);
+                            }
+                        @endphp
 
-                                                </div>
+                        <div class="cards-grid">
+                            @foreach ($group->reverse() as $employee)
+                                <div class="card-container-back">
+                                    @if (isset($employee->MATRI))
+                                        <!-- ================== بطاقة الموظف ================== -->
+                                        <!-- زخرفة العلم -->
+                                        <div class="flag-decoration-back">
+                                            <svg width="100%" height="100%" viewBox="0 0 300 100"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0" y="0" width="200" height="20" fill="#006e2e"
+                                                    transform="rotate(-45 0 0)" />
+                                                <rect x="0" y="20" width="200" height="20" fill="#d50000"
+                                                    transform="rotate(-45 0 0)" />
+                                            </svg>
+                                        </div>
+
+                                        <!-- رأس البطاقة -->
+                                        <div class="back-header d-flex justify-content-between align-items-center">
+                                            <div class="dz-logo left-logo">
+                                                <img src="{{ asset('assets/img/brand/Algeria.png') }}" alt="DZ Logo Left">
+                                            </div>
+
+                                            <div class="back-subtitle text-center flex-grow-1">
+                                                IDDZA{{ $employee->MATRI ?? '' }}
+                                                >>> {{ $employee->NOM ?? '' }}
+                                                <<< {{ $employee->PRENOM ?? '' }}
+                                                <<< {{ $employee->DATNAIS ? \Carbon\Carbon::parse($employee->DATNAIS)->format('Ymd') : '' }}
+                                                <<<<
+                                            </div>
+
+                                            <div class="dz-logo right-logo"></div>
                                         </div>
 
                                         <!-- محتوى البطاقة -->
                                         <div class="back-content">
-                                            <!-- قسم الملاحظات -->
                                             <div class="notes-section">
                                                 <div class="notes-title">ملاحظات هامة</div>
                                                 <div class="notes-content">
@@ -490,10 +499,12 @@
                                                     <div class="note-item">في حالة الضياع أو السرقة يجب التبليغ فورا</div>
                                                 </div>
                                             </div>
+
                                             <div class="watermark-logo">
                                                 <img src="{{ asset('assets/img/brand/logo57.png') }}" alt="Watermark">
                                             </div>
                                         </div>
+
                                         <!-- تذييل البطاقة -->
                                         <div class="back-footer">
                                             <div class="footer-info">
@@ -512,7 +523,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @else
+                                        <!-- ================== بطاقة فارغة ================== -->
+                                        <div class="back-content"
+                                            style="border: 1px dashed #ccc; opacity: 0.3; display: flex; justify-content: center; align-items: center; height: 100%;">
+                                            <span>بطاقة فارغة لتكملة الصفحة</span>
+                                        </div>
+                                    @endif
+                                </div>
                             @endforeach
                         </div>
                     @endforeach
@@ -521,6 +539,7 @@
         </div>
     </div>
 @endsection
+
 @section('js')
     <script>
         document.addEventListener('DOMContentLoaded', function() {

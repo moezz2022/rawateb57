@@ -492,115 +492,113 @@
                         </button>
                     </div>
                 </div>
+
                 <div class="document">
                     @foreach ($employees->chunk(10) as $group)
+                        @php
+                            // إذا كان عدد البطاقات في الصفحة فردي نضيف بطاقة فارغة لتكملة العدد
+                            if ($group->count() % 2 != 0) {
+                                $group->push((object) []);
+                            }
+                        @endphp
+
                         <div class="cards-grid">
                             @foreach ($group as $employee)
                                 <div class="card-container">
-                                    <div class="flag-decoration">
-                                        <svg width="100%" height="100%" viewBox="0 0 300 100"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <!-- الشريط الأخضر -->
-                                            <rect x="0" y="0" width="200" height="20" fill="#006e2e"
-                                                transform="rotate(-45 0 0)" />
-                                            <!-- الشريط الأحمر -->
-                                            <rect x="0" y="20" width="200" height="20" fill="#d50000"
-                                                transform="rotate(-45 0 0)" />
-                                        </svg>
-                                    </div>
-                                    <!-- رأس البطاقة -->
-                                    <div class="card-header-section">
-                                        <div class="card-header-title">الجمهورية الجزائرية الديمقراطية الشعبية</div>
-                                        <div class="ministry-info">
-                                            وزارة التربية الوطنية<br>
-                                            مديرية التربية لولاية المغير
+                                    @if (isset($employee->id))
+                                        {{-- ================== بطاقة الموظف ================== --}}
+                                        <div class="flag-decoration">
+                                            <svg width="100%" height="100%" viewBox="0 0 300 100"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0" y="0" width="200" height="20" fill="#006e2e"
+                                                    transform="rotate(-45 0 0)" />
+                                                <rect x="0" y="20" width="200" height="20" fill="#d50000"
+                                                    transform="rotate(-45 0 0)" />
+                                            </svg>
                                         </div>
-                                    </div>
-                                    <!-- الشعار -->
-                                    <div class="logo-section">
-                                        <div class="logo">
-                                            <img src="{{ asset('assets/img/brand/logo57.png') }}" alt="Logo">
-                                        </div>
-                                    </div>
-                                    <!-- نوع البطاقة -->
-                                    <div class="card-type">بطاقة مهنية</div>
-                                    <div class="watermark-logo">
-                                        <img src="{{ asset('assets/img/brand/logo57.png') }}" alt="Watermark">
-                                    </div>
-                                    <!-- محتوى البطاقة -->
-                                    <div class="content">
-                                        <div class="info-section">
-                                            <div class="info-row">
-                                                <span class="info-label">رقم البطاقة :</span>
-                                                <span class="info-value">{{ '00' . $employee->id ?? '' }}</span>
-                                                <i class="edit-btn fa fa-edit d-inline-block ms-2 text-danger d-print-none"
-                                                    onclick="makeEditable(this)"></i>
-                                            </div>
-                                            <div class="info-row">
-                                                <span class="info-label">رقم التعريف الوطني للموظف:</span>
-                                                <span class="info-value">{{ $employee->MATRI ?? '' }}</span>
-                                                <i class="edit-btn fa fa-edit d-inline-block ms-2 text-danger d-print-none"
-                                                    onclick="makeEditable(this)"></i>
-                                            </div>
-                                            <div class="info-row">
-                                                <span class="info-label">اللقب والاسم:</span>
-                                                <span class="info-value">{{ $employee->NOMA ?? '' }}
-                                                    {{ $employee->PRENOMA ?? '' }}</span>
-                                                <i class="edit-btn fa fa-edit d-inline-block ms-2 text-danger d-print-none"
-                                                    onclick="makeEditable(this)"></i>
-                                            </div>
-                                            <div class="info-row">
-                                                <span class="info-label">تاريخ الميلاد:</span>
-                                                <span class="info-value">{{ $employee->DATNAIS ?? '' }}</span>
-                                                <i class="edit-btn fa fa-edit d-inline-block ms-2 text-danger d-print-none"
-                                                    onclick="makeEditable(this)"></i>
-                                            </div>
-                                            <div class="info-row">
-                                                <span class="info-label">الوظيفة:</span>
-                                                <span class="info-value">{{ $employee->grade->name ?? '' }}</span>
-                                                <i class="edit-btn fa fa-edit d-inline-block ms-2 text-danger d-print-none"
-                                                    onclick="makeEditable(this)"></i>
-                                            </div>
-                                            <div class="info-row">
-                                                <span class="info-label">تاريخ التوظيف:</span>
-                                                <span class="info-value">{{ $employee->DATENT ?? '' }}</span>
-                                                <i class="edit-btn fa fa-edit d-inline-block ms-2 text-danger d-print-none"
-                                                    onclick="makeEditable(this)"></i>
-                                            </div>
-                                        </div>
-                                        <div class="photo-section">
-                                            <div class="photo" id="photo-container-{{ $employee->id }}">
-                                                <span class="photo-placeholder">صورة<br>الموظف</span>
-                                                <!-- أيقونة الكاميرا -->
-                                                <button type="button" class="upload-icon d-print-none"
-                                                    onclick="uploadImage({{ $employee->id }})">
-                                                    <i class="fa fa-camera"></i>
-                                                </button>
 
-                                                <!-- مدخل اختيار الصورة -->
-                                                <input type="file" accept="image/*" id="file-input-{{ $employee->id }}"
-                                                    style="display:none;">
+                                        <!-- رأس البطاقة -->
+                                        <div class="card-header-section">
+                                            <div class="card-header-title">الجمهورية الجزائرية الديمقراطية الشعبية</div>
+                                            <div class="ministry-info">
+                                                وزارة التربية الوطنية<br>
+                                                مديرية التربية لولاية المغير
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- تذييل البطاقة -->
-                                    <div class="page-footer">
-                                        <div class="barcode-section">
-                                            @if (isset($employee->MATRI) && isset($employee->CLECPT))
-                                                <img src="data:image/png;base64,{{ DNS1D::getBarcodePNG('00799999000' . $employee->MATRI . $employee->CLECPT, 'C128', 1.5, 40) }}"
-                                                    alt="Barcode" />
-                                            @endif
+                                        <!-- الشعار -->
+                                        <div class="logo-section">
+                                            <div class="logo">
+                                                <img src="{{ asset('assets/img/brand/logo57.png') }}" alt="Logo">
+                                            </div>
                                         </div>
-                                        <div class="qr-code">
-                                            @if (isset($employee->MATRI) && isset($employee->CLECPT))
-                                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ urlencode('00799999000' . $employee->MATRI . $employee->CLECPT) }}"
-                                                    alt="QR Code" />
-                                            @else
-                                                <span style="font-size: 6pt; color: #999;">QR Code</span>
-                                            @endif
+
+                                        <!-- نوع البطاقة -->
+                                        <div class="card-type">بطاقة مهنية</div>
+
+                                        <div class="watermark-logo">
+                                            <img src="{{ asset('assets/img/brand/logo57.png') }}" alt="Watermark">
                                         </div>
-                                    </div>
+
+                                        <!-- المحتوى -->
+                                        <div class="content">
+                                            <div class="info-section">
+                                                <div class="info-row">
+                                                    <span class="info-label">رقم البطاقة :</span>
+                                                    <span class="info-value">{{ '00' . $employee->id }}</span>
+                                                </div>
+                                                <div class="info-row">
+                                                    <span class="info-label">رقم التعريف الوطني:</span>
+                                                    <span class="info-value">{{ $employee->MATRI }}</span>
+                                                </div>
+                                                <div class="info-row">
+                                                    <span class="info-label">اللقب والاسم:</span>
+                                                    <span class="info-value">{{ $employee->NOMA }}
+                                                        {{ $employee->PRENOMA }}</span>
+                                                </div>
+                                                <div class="info-row">
+                                                    <span class="info-label">تاريخ الميلاد:</span>
+                                                    <span class="info-value">{{ $employee->DATNAIS }}</span>
+                                                </div>
+                                                <div class="info-row">
+                                                    <span class="info-label">الوظيفة:</span>
+                                                    <span class="info-value">{{ $employee->grade->name ?? '' }}</span>
+                                                </div>
+                                                <div class="info-row">
+                                                    <span class="info-label">تاريخ التوظيف:</span>
+                                                    <span class="info-value">{{ $employee->DATENT }}</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="photo-section">
+                                                <div class="photo" id="photo-container-{{ $employee->id }}">
+                                                    <span class="photo-placeholder">صورة<br>الموظف</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- التذييل -->
+                                        <div class="page-footer">
+                                            <div class="barcode-section">
+                                                @if (isset($employee->MATRI) && isset($employee->CLECPT))
+                                                    <img src="data:image/png;base64,{{ DNS1D::getBarcodePNG('00799999000' . $employee->MATRI . $employee->CLECPT, 'C128', 1.5, 40) }}"
+                                                        alt="Barcode" />
+                                                @endif
+                                            </div>
+                                            <div class="qr-code">
+                                                @if (isset($employee->MATRI) && isset($employee->CLECPT))
+                                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ urlencode('00799999000' . $employee->MATRI . $employee->CLECPT) }}"
+                                                        alt="QR Code" />
+                                                @endif
+                                            </div>
+                                        </div>
+                                    @else
+                                        {{-- ================== بطاقة فارغة ================== --}}
+                                        <div class="content"
+                                            style="border: 1px dashed #ccc; opacity: 0.3; display: flex; justify-content: center; align-items: center; height: 100%;">
+                                            <span>بطاقة فارغة لتكملة الصفحة</span>
+                                        </div>
+                                    @endif
                                 </div>
                             @endforeach
                         </div>
@@ -610,6 +608,7 @@
         </div>
     </div>
 @endsection
+
 @section('js')
     <script>
         window.previewImage = function(event, id) {

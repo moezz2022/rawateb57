@@ -209,9 +209,15 @@
                 @if ($employees->isNotEmpty())
                     <div id="payroll-details" class="card" style="display: none;">
                         <div class="card-header bg-light">
-                            <h3 class="card-title">
-                                <i class="fas fa-file-alt ml-2"></i> كشف الراتب
-                            </h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="card-title"> <i class="fas fa-file-invoice-dollar ml-2"></i>
+                                    تفاصيل كشف الراتب
+                                </h3>
+                                <a href="{{ route('paie.show') }}" type="button"
+                                    class="btn strong btn-warning btn-lg btn-fill">
+                                    <i class="fas fa-arrow-right ml-2"></i> العودة إلى صفحة الكشوف
+                                </a>
+                            </div>
                         </div>
                         <div class="card-footer text-left">
                             <!-- قائمة الموظفين -->
