@@ -77,4 +77,10 @@ class Employee extends Model
         return $this->belongsTo(Group::class, 'PRIMAIRE', 'AFFECT');
     }
 
+    public function attendances()
+    {
+        return $this->hasMany(Attendance::class);
+    }
+
+
 }

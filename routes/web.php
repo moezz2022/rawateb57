@@ -20,6 +20,7 @@ use App\Http\Controllers\PrimeScolariteController;
 use App\Http\Controllers\MonthlyAbsenceController;
 use App\Http\Controllers\AtsController;
 use App\Http\Controllers\ConcoursController;
+use App\Http\Controllers\AttendanceController;
 
 Route::middleware('auth')->get('/messages/latest', [MessageController::class, 'latest']);
 
@@ -89,7 +90,31 @@ Route::middleware(['auth', 'twofactor', 'admin'])->group(function () {
         ->name('cards.print.selected');
     Route::get('/cards/back', [EmployeeController::class, 'showBack'])->name('employees.cardsback');
 
-
+  Route::prefix('attendance')->name('attendance.')->group(function () {
+    
+    // صفحات المسح
+    Route::get('/scan-camera', [AttendanceController::class, 'scanCameraPage'])->name('scan.camera');
+    Route::get('/scan-barcode', [AttendanceController::class, 'scanBarcodePage'])->name('scan.barcode');
+    
+    // معالجة المسح
+    Route::post('/scan', [AttendanceController::class, 'postScan'])->name('scan.post');
+    Route::post('/scan/api', [AttendanceController::class, 'apiScan'])->name('scan.api');
+    
+    // إدارة سجلات الحضور
+    Route::get('/records', [AttendanceController::class, 'index'])->name('records'); // ✅ تم التصحيح
+    Route::get('/records/{id}', [AttendanceController::class, 'show'])->name('records.show');
+    Route::get('/employee/{employeeId}', [AttendanceController::class, 'employeeRecords'])->name('employee.records');
+    
+    // التقارير والتصدير
+    Route::get('/reports', [AttendanceController::class, 'reports'])->name('reports');
+    Route::get('/export', [AttendanceController::class, 'export'])->name('export');
+    Route::post('/export/excel', [AttendanceController::class, 'exportExcel'])->name('export.excel');
+    Route::post('/export/pdf', [AttendanceController::class, 'exportPdf'])->name('export.pdf');
+    
+    // الإحصائيات (اختياري)
+    Route::get('/statistics', [AttendanceController::class, 'statistics'])->name('statistics');
+    Route::get('/dashboard', [AttendanceController::class, 'dashboard'])->name('dashboard');
+});
 
     Route::get('/paie/folioupload', [FileUploadController::class, 'index'])->name('paie.index');
     Route::post('/paie/upload', [FileUploadController::class, 'processFile'])->name('upload.process');

@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::qucVBsm0aTVNloo7',
+            '_route' => 'generated::onqy7koCsZS2dasS',
           ),
           1 => NULL,
           2 => 
@@ -33,7 +33,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::wbVW0nPAUgWir9Mn',
+            '_route' => 'generated::lBieiwF7ktqxVM7t',
           ),
           1 => NULL,
           2 => 
@@ -90,7 +90,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::0VECIa6i05YfH9sU',
+            '_route' => 'generated::4wGbyI01s8DEnehK',
           ),
           1 => NULL,
           2 => 
@@ -145,7 +145,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::HmgTr7iNTKtelN1r',
+            '_route' => 'generated::KoWLjN0TEw4rqHtY',
           ),
           1 => NULL,
           2 => 
@@ -594,6 +594,222 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'employees.cardsback',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/scan-camera' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.scan.camera',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/scan-barcode' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.scan.barcode',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/scan' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.scan.post',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/scan/api' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.scan.api',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/records' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.records',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/reports' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.reports',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/export' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.export',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/export/excel' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.export.excel',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/export/pdf' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.export.pdf',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/statistics' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.statistics',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/attendance/dashboard' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.dashboard',
           ),
           1 => NULL,
           2 => 
@@ -1870,7 +2086,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::KjzTznzB5uuo5fIn',
+            '_route' => 'generated::kXZZYvMiOZeDLaoU',
           ),
           1 => NULL,
           2 => 
@@ -1889,7 +2105,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::dp9LA00gdxpTJfLT',
+            '_route' => 'generated::H2fpSC8B62VLvAu3',
           ),
           1 => NULL,
           2 => 
@@ -1908,7 +2124,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8vWE1CxNtLxkScTh',
+            '_route' => 'generated::Riiz5mik3OAYRMLH',
           ),
           1 => NULL,
           2 => 
@@ -1998,7 +2214,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/g(?|et\\-(?|communes/([^/]++)(*:36)|sub\\-groups/([^/]++)(*:63))|roups/(?|([^/]++)(?|/edit(*:96)|(*:103))|import(*:118)))|/istidea/print/([^/]++)(*:151)|/concours/([^/]++)(*:177)|/users/(?|activate/([^/]++)(*:212)|deactivate/([^/]++)(*:239)|([^/]++)(?|/edit(*:263)|(*:271))|update\\-group(*:293))|/employees/(?|([^/]++)(*:324)|statistics(*:342)|([^/]++)(?|/(?|assign(*:371)|unassign(*:387)|edit(*:399))|(*:408))|search(*:423))|/p(?|aie/(?|salary\\-(?|slip/([^/]++)/([^/]++)/([^/]++)(*:486)|annual/([^/]++)/([^/]++)(*:518))|details(?|/([^/]++)/([^/]++)/([^/]++)(*:564)|\\-report/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:616))|rndmdetails/([^/]++)/([^/]++)/([^/]++)(*:663))|rime(?|\\-rendements/(?|details/([^/]++)/([^/]++)(*:720)|export/([^/]++)/([^/]++)(*:752)|settings/([^/]++)/toggle(*:784))|scolarite/(?|primesettings/([^/]++)/toggle(*:835)|export/([^/]++)(*:858)|show/([^/]++)(*:879))))|/a(?|bsences/(?|months/([^/]++)/toggle(*:928)|export/([^/]++)/([^/]++)(*:960)|details/([0-9]+)/([0-9]+)(*:993))|t(?|tachments/download/([^/]++)(*:1033)|s/(?|months/([^/]++)(*:1062)|employees/([^/]++)/([^/]++)(*:1098)|page(?|1/([^/]++)(*:1124)|2/([^/]++)(*:1143)|3/([^/]++)(*:1162)))))|/messages/(?|([^/]++)/forward(*:1204)|forward/([^/]++)(*:1229)|([^/]++)(*:1246))|/sub\\-groups/([^/]++)(*:1277)|/reset\\-password/([^/]++)(*:1311))/?$}sDu',
+      0 => '{^(?|/g(?|et\\-(?|communes/([^/]++)(*:36)|sub\\-groups/([^/]++)(*:63))|roups/(?|([^/]++)(?|/edit(*:96)|(*:103))|import(*:118)))|/istidea/print/([^/]++)(*:151)|/concours/([^/]++)(*:177)|/users/(?|activate/([^/]++)(*:212)|deactivate/([^/]++)(*:239)|([^/]++)(?|/edit(*:263)|(*:271))|update\\-group(*:293))|/employees/(?|([^/]++)(*:324)|statistics(*:342)|([^/]++)(?|/(?|assign(*:371)|unassign(*:387)|edit(*:399))|(*:408))|search(*:423))|/a(?|t(?|t(?|endance/(?|records/([^/]++)(*:472)|employee/([^/]++)(*:497))|achments/download/([^/]++)(*:532))|s/(?|months/([^/]++)(*:561)|employees/([^/]++)/([^/]++)(*:596)|page(?|1/([^/]++)(*:621)|2/([^/]++)(*:639)|3/([^/]++)(*:657))))|bsences/(?|months/([^/]++)/toggle(*:701)|export/([^/]++)/([^/]++)(*:733)|details/([0-9]+)/([0-9]+)(*:766)))|/p(?|aie/(?|salary\\-(?|slip/([^/]++)/([^/]++)/([^/]++)(*:830)|annual/([^/]++)/([^/]++)(*:862))|details(?|/([^/]++)/([^/]++)/([^/]++)(*:908)|\\-report/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:960))|rndmdetails/([^/]++)/([^/]++)/([^/]++)(*:1007))|rime(?|\\-rendements/(?|details/([^/]++)/([^/]++)(*:1065)|export/([^/]++)/([^/]++)(*:1098)|settings/([^/]++)/toggle(*:1131))|scolarite/(?|primesettings/([^/]++)/toggle(*:1183)|export/([^/]++)(*:1207)|show/([^/]++)(*:1229))))|/messages/(?|([^/]++)/forward(*:1270)|forward/([^/]++)(*:1295)|([^/]++)(*:1312))|/sub\\-groups/([^/]++)(*:1343)|/reset\\-password/([^/]++)(*:1377))/?$}sDu',
     ),
     3 => 
     array (
@@ -2008,7 +2224,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::vJ0h57cCB3rulw2T',
+            '_route' => 'generated::Cft9GMpDr3vy0Zer',
           ),
           1 => 
           array (
@@ -2031,7 +2247,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ZDgkoD9uJ0ynIoOb',
+            '_route' => 'generated::BI5QRNnEztrBHyLb',
           ),
           1 => 
           array (
@@ -2444,13 +2660,268 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      486 => 
+      472 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::swnXaYhWTSMcphhZ',
+            '_route' => 'attendance.records.show',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      497 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attendance.employee.records',
+          ),
+          1 => 
+          array (
+            0 => 'employeeId',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      532 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'attachments.download',
+          ),
+          1 => 
+          array (
+            0 => 'filename',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      561 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ats.months',
+          ),
+          1 => 
+          array (
+            0 => 'year',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      596 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ats.employees',
+          ),
+          1 => 
+          array (
+            0 => 'year',
+            1 => 'month',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      621 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ats.generate1',
+          ),
+          1 => 
+          array (
+            0 => 'matricule',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      639 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ats.generate2',
+          ),
+          1 => 
+          array (
+            0 => 'matricule',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      657 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ats.generate3',
+          ),
+          1 => 
+          array (
+            0 => 'matricule',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      701 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'monthly_absences.toggle',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PATCH' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      733 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'monthly_absences.export',
+          ),
+          1 => 
+          array (
+            0 => 'year',
+            1 => 'month',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      766 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'monthly_absences.details',
+          ),
+          1 => 
+          array (
+            0 => 'year',
+            1 => 'month',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      830 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::AM1sKw4cs71jdotJ',
           ),
           1 => 
           array (
@@ -2469,13 +2940,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      518 => 
+      862 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::SIdxK4b9enM3TCM1',
+            '_route' => 'generated::Ki0ntaPXMB8r6TEq',
           ),
           1 => 
           array (
@@ -2493,7 +2964,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      564 => 
+      908 => 
       array (
         0 => 
         array (
@@ -2518,13 +2989,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      616 => 
+      960 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::zpa5EzbM4SVjYT27',
+            '_route' => 'generated::CsSLe6glPUnt3Iiv',
           ),
           1 => 
           array (
@@ -2544,7 +3015,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      663 => 
+      1007 => 
       array (
         0 => 
         array (
@@ -2569,7 +3040,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      720 => 
+      1065 => 
       array (
         0 => 
         array (
@@ -2593,7 +3064,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      752 => 
+      1098 => 
       array (
         0 => 
         array (
@@ -2617,7 +3088,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      784 => 
+      1131 => 
       array (
         0 => 
         array (
@@ -2639,7 +3110,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      835 => 
+      1183 => 
       array (
         0 => 
         array (
@@ -2661,7 +3132,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      858 => 
+      1207 => 
       array (
         0 => 
         array (
@@ -2684,7 +3155,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      879 => 
+      1229 => 
       array (
         0 => 
         array (
@@ -2707,216 +3178,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      928 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'monthly_absences.toggle',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'PATCH' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      960 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'monthly_absences.export',
-          ),
-          1 => 
-          array (
-            0 => 'year',
-            1 => 'month',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      993 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'monthly_absences.details',
-          ),
-          1 => 
-          array (
-            0 => 'year',
-            1 => 'month',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      1033 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'attachments.download',
-          ),
-          1 => 
-          array (
-            0 => 'filename',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      1062 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'ats.months',
-          ),
-          1 => 
-          array (
-            0 => 'year',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      1098 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'ats.employees',
-          ),
-          1 => 
-          array (
-            0 => 'year',
-            1 => 'month',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      1124 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'ats.generate1',
-          ),
-          1 => 
-          array (
-            0 => 'matricule',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      1143 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'ats.generate2',
-          ),
-          1 => 
-          array (
-            0 => 'matricule',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      1162 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'ats.generate3',
-          ),
-          1 => 
-          array (
-            0 => 'matricule',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      1204 => 
+      1270 => 
       array (
         0 => 
         array (
@@ -2939,7 +3201,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1229 => 
+      1295 => 
       array (
         0 => 
         array (
@@ -2961,7 +3223,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1246 => 
+      1312 => 
       array (
         0 => 
         array (
@@ -2984,13 +3246,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1277 => 
+      1343 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::ZhiERQ5Y0NFLLDBe',
+            '_route' => 'generated::5KUdcGnvYvO2a6qj',
           ),
           1 => 
           array (
@@ -3007,7 +3269,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1311 => 
+      1377 => 
       array (
         0 => 
         array (
@@ -3045,7 +3307,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::qucVBsm0aTVNloo7' => 
+    'generated::onqy7koCsZS2dasS' => 
     array (
       'methods' => 
       array (
@@ -3073,8 +3335,8 @@ app('router')->setCompiledRoutes(
                     return response(\\Illuminate\\Support\\Facades\\View::file(\'D:\\\\rawateb‏\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\', [
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
-                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000006490000000000000000";}}',
-        'as' => 'generated::qucVBsm0aTVNloo7',
+                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000006640000000000000000";}}',
+        'as' => 'generated::onqy7koCsZS2dasS',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3090,7 +3352,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::wbVW0nPAUgWir9Mn' => 
+    'generated::lBieiwF7ktqxVM7t' => 
     array (
       'methods' => 
       array (
@@ -3112,7 +3374,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::wbVW0nPAUgWir9Mn',
+        'as' => 'generated::lBieiwF7ktqxVM7t',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3144,7 +3406,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:47:"function () {
     return \\view(\'auth.index\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000064f0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000066a0000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -3277,7 +3539,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::HmgTr7iNTKtelN1r' => 
+    'generated::KoWLjN0TEw4rqHtY' => 
     array (
       'methods' => 
       array (
@@ -3295,13 +3557,13 @@ app('router')->setCompiledRoutes(
     \\request()->session()->invalidate();
     \\request()->session()->regenerateToken();
     return \\response()->json([\'message\' => \'تم حذف الجلسة بنجاح\']);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006560000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006710000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::HmgTr7iNTKtelN1r',
+        'as' => 'generated::KoWLjN0TEw4rqHtY',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3317,7 +3579,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::vJ0h57cCB3rulw2T' => 
+    'generated::Cft9GMpDr3vy0Zer' => 
     array (
       'methods' => 
       array (
@@ -3338,7 +3600,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::vJ0h57cCB3rulw2T',
+        'as' => 'generated::Cft9GMpDr3vy0Zer',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4706,6 +4968,522 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'attendance.scan.camera' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/scan-camera',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@scanCameraPage',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@scanCameraPage',
+        'as' => 'attendance.scan.camera',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.scan.barcode' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/scan-barcode',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@scanBarcodePage',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@scanBarcodePage',
+        'as' => 'attendance.scan.barcode',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.scan.post' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'attendance/scan',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@postScan',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@postScan',
+        'as' => 'attendance.scan.post',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.scan.api' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'attendance/scan/api',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@apiScan',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@apiScan',
+        'as' => 'attendance.scan.api',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.records' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/records',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@index',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@index',
+        'as' => 'attendance.records',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.records.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/records/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@show',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@show',
+        'as' => 'attendance.records.show',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.employee.records' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/employee/{employeeId}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@employeeRecords',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@employeeRecords',
+        'as' => 'attendance.employee.records',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.reports' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/reports',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@reports',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@reports',
+        'as' => 'attendance.reports',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.export' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/export',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@export',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@export',
+        'as' => 'attendance.export',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.export.excel' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'attendance/export/excel',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@exportExcel',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@exportExcel',
+        'as' => 'attendance.export.excel',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.export.pdf' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'attendance/export/pdf',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@exportPdf',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@exportPdf',
+        'as' => 'attendance.export.pdf',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.statistics' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/statistics',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@statistics',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@statistics',
+        'as' => 'attendance.statistics',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'attendance.dashboard' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'attendance/dashboard',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'twofactor',
+          3 => 'admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AttendanceController@dashboard',
+        'controller' => 'App\\Http\\Controllers\\AttendanceController@dashboard',
+        'as' => 'attendance.dashboard',
+        'namespace' => NULL,
+        'prefix' => '/attendance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'paie.index' => 
     array (
       'methods' => 
@@ -4902,7 +5680,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::swnXaYhWTSMcphhZ' => 
+    'generated::AM1sKw4cs71jdotJ' => 
     array (
       'methods' => 
       array (
@@ -4925,7 +5703,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::swnXaYhWTSMcphhZ',
+        'as' => 'generated::AM1sKw4cs71jdotJ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6406,7 +7184,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:61:"function () {
         return \\view(\'messages.success\');
-    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006a90000000000000000";}}',
+    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006d10000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7119,7 +7897,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ZDgkoD9uJ0ynIoOb' => 
+    'generated::BI5QRNnEztrBHyLb' => 
     array (
       'methods' => 
       array (
@@ -7142,7 +7920,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::ZDgkoD9uJ0ynIoOb',
+        'as' => 'generated::BI5QRNnEztrBHyLb',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7467,7 +8245,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::SIdxK4b9enM3TCM1' => 
+    'generated::Ki0ntaPXMB8r6TEq' => 
     array (
       'methods' => 
       array (
@@ -7490,7 +8268,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::SIdxK4b9enM3TCM1',
+        'as' => 'generated::Ki0ntaPXMB8r6TEq',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7740,7 +8518,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::zpa5EzbM4SVjYT27' => 
+    'generated::CsSLe6glPUnt3Iiv' => 
     array (
       'methods' => 
       array (
@@ -7763,7 +8541,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::zpa5EzbM4SVjYT27',
+        'as' => 'generated::CsSLe6glPUnt3Iiv',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8401,7 +9179,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ZhiERQ5Y0NFLLDBe' => 
+    'generated::5KUdcGnvYvO2a6qj' => 
     array (
       'methods' => 
       array (
@@ -8423,7 +9201,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::ZhiERQ5Y0NFLLDBe',
+        'as' => 'generated::5KUdcGnvYvO2a6qj',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8439,7 +9217,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::dp9LA00gdxpTJfLT' => 
+    'generated::H2fpSC8B62VLvAu3' => 
     array (
       'methods' => 
       array (
@@ -8460,7 +9238,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::dp9LA00gdxpTJfLT',
+        'as' => 'generated::H2fpSC8B62VLvAu3',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8476,7 +9254,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8vWE1CxNtLxkScTh' => 
+    'generated::Riiz5mik3OAYRMLH' => 
     array (
       'methods' => 
       array (
@@ -8497,7 +9275,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::8vWE1CxNtLxkScTh',
+        'as' => 'generated::Riiz5mik3OAYRMLH',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8513,7 +9291,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::KjzTznzB5uuo5fIn' => 
+    'generated::kXZZYvMiOZeDLaoU' => 
     array (
       'methods' => 
       array (
@@ -8534,7 +9312,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::KjzTznzB5uuo5fIn',
+        'as' => 'generated::kXZZYvMiOZeDLaoU',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8550,7 +9328,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::0VECIa6i05YfH9sU' => 
+    'generated::4wGbyI01s8DEnehK' => 
     array (
       'methods' => 
       array (
@@ -8571,7 +9349,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::0VECIa6i05YfH9sU',
+        'as' => 'generated::4wGbyI01s8DEnehK',
       ),
       'fallback' => false,
       'defaults' => 

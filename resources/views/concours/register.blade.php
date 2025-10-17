@@ -1,10 +1,11 @@
-@extends('layouts.master2')
+@extends('layouts.master3')
 @section('css')
     <!--- Internal Select2 css-->
     <link href="{{ asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
     <style>
-        .container {
-            width: 1400px;
+        .container-fluid {
+            margin: 0 auto;
+            min-height: calc(80vh - 90px);
         }
 
         /* Header Section */
@@ -12,7 +13,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
             background: linear-gradient(to right, #6a11cb, #2575fc);
             text-align: center;
             color: white;
@@ -201,10 +201,10 @@
     </style>
 @endsection
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-md-12">
-                <div class="header-logo">
+                <div class="header-logo mt-5">
                     <a href="{{ route('auth.index') }}"><img src="{{ asset('assets/img/brand/logo57.png') }}" class="logo"
                             alt="logo">
                     </a>

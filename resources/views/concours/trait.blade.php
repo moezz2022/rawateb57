@@ -78,7 +78,7 @@
                             </thead>
                             <tbody id="users-table-body">
                                 <tr>
-                                    <td colspan="8" class="text-center">يرجى اختيار البلدية والرتبة لعرض البيانات</td>
+                                    <td colspan="7" class="text-center">يرجى اختيار البلدية والرتبة لعرض البيانات</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -192,36 +192,6 @@
     <script src="{{ asset('assets/plugins/datatable/js/responsive.bootstrap4.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            if ($.fn.DataTable.isDataTable('#traitcandidate')) {
-                $('#traitcandidate').DataTable().destroy();
-            }
-            $('#traitcandidate').DataTable({
-                paging: true,
-                pageLength: 10,
-                language: {
-                    searchPlaceholder: 'بحث...',
-                    sSearch: '',
-                    lengthMenu: 'عرض _MENU_ مدخلات',
-                    info: 'عرض _START_ إلى _END_ من _TOTAL_',
-                    infoEmpty: 'عرض 0 إلى 0 من 0 ',
-                    infoFiltered: '(منتقاة من _MAX_ إجمالي المدخلات)',
-                    paginate: {
-                        first: 'الأول',
-                        last: 'الأخير',
-                        next: 'التالي',
-                        previous: 'السابق'
-                    },
-                    zeroRecords: 'لا توجد سجلات مطابقة',
-                    emptyTable: 'لا توجد بيانات في الجدول',
-                    search: 'بحث:'
-                },
-                responsive: true,
-                autoWidth: false
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
             function getStatusBadge(status) {
                 switch (status) {
                     case 1:
@@ -257,7 +227,7 @@
                     },
                     beforeSend: function() {
                         $('#users-table-body').html(
-                            '<tr><td colspan="8" class="text-center text-warning">جاري التحميل...</td></tr>'
+                            '<tr><td colspan="7" class="text-center text-warning">جاري التحميل...</td></tr>'
                         );
                     },
                     success: function(response) {
@@ -284,12 +254,35 @@
                             });
                         } else {
                             tableBody.append(
-                                '<tr><td colspan="8" class="text-center text-muted">لا توجد بيانات مطابقة</td></tr>'
+                                '<tr><td colspan="7" class="text-center text-muted">لا توجد بيانات مطابقة</td></tr>'
                             );
                         }
                         if ($.fn.DataTable.isDataTable('#traitcandidate')) {
                             $('#traitcandidate').DataTable().destroy();
                         }
+                        $('#traitcandidate').DataTable({
+                            paging: true,
+                            pageLength: 10,
+                            language: {
+                                searchPlaceholder: 'بحث...',
+                                sSearch: '',
+                                lengthMenu: 'عرض _MENU_ مدخلات',
+                                info: 'عرض _START_ إلى _END_ من _TOTAL_',
+                                infoEmpty: 'عرض 0 إلى 0 من 0 ',
+                                infoFiltered: '(منتقاة من _MAX_ إجمالي المدخلات)',
+                                paginate: {
+                                    first: 'الأول',
+                                    last: 'الأخير',
+                                    next: 'التالي',
+                                    previous: 'السابق'
+                                },
+                                zeroRecords: 'لا توجد سجلات مطابقة',
+                                emptyTable: 'لا توجد بيانات في الجدول',
+                                search: 'بحث:'
+                            },
+                            responsive: true,
+                            autoWidth: false
+                        });
                     },
                     error: function() {
                         alertify.error("حدث خطأ أثناء جلب البيانات.");
@@ -408,30 +401,30 @@
             e.preventDefault();
 
             $.ajax({
-                    url: "{{ route('updateDocumentsBulk') }}",
-                    method: 'POST',
-                    data: {
-                        documents: documentStatuses,
-                        _token: '{{ csrf_token() }}'
-                    },
-                    beforeSend: function() {
-                        $('#traitDiplomes button[type="submit"]').prop('disabled', true).text(
-                            'جاري الحفظ...');
-                    },
-                    success: function(response) {
-                        if (response.success) {
-                            alertify.success('تم تحديث حالة الوثائق بنجاح');
-                            $('#data-modal').modal('hide');
+                url: "{{ route('updateDocumentsBulk') }}",
+                method: 'POST',
+                data: {
+                    documents: documentStatuses,
+                    _token: '{{ csrf_token() }}'
+                },
+                beforeSend: function() {
+                    $('#traitDiplomes button[type="submit"]').prop('disabled', true).text(
+                        'جاري الحفظ...');
+                },
+                success: function(response) {
+                    if (response.success) {
+                        alertify.success('تم تحديث حالة الوثائق بنجاح');
+                        $('#data-modal').modal('hide');
 
-                            if (response.updated_statuses) {
-                                Object.entries(response.updated_statuses).forEach(([id, status]) => {
-                                    const badgeHtml = getStatusBadge(status);
-                                    $(`#users-table-body tr a[data-id="${id}"]`)
-                                        .closest('tr')
-                                        .find('td:nth-child(6)')
-                                        .html(badgeHtml);
-                                });
-                            }
+                        if (response.updated_statuses) {
+                            Object.entries(response.updated_statuses).forEach(([id, status]) => {
+                                const badgeHtml = getStatusBadge(status);
+                                $(`#users-table-body tr a[data-id="${id}"]`)
+                                    .closest('tr')
+                                    .find('td:nth-child(6)')
+                                    .html(badgeHtml);
+                            });
+                        }
 
                     } else {
                         alertify.error(response.message || 'فشل في تحديث الوثائق');

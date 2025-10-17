@@ -281,26 +281,20 @@
                 print-color-adjust: exact !important;
             }
 
-            html {
+            html,
+            body {
                 margin: 0 !important;
                 padding: 0 !important;
                 width: 210mm;
                 height: 297mm;
-            }
-
-            body {
-                margin: 0 !important;
-                padding: 0 !important;
                 background: #fff !important;
-                width: 210mm;
-                min-height: 297mm;
             }
 
             .document {
                 margin: 0 !important;
                 padding: 0 !important;
-                background: #fff !important;
                 width: 100% !important;
+                background: #fff !important;
             }
 
             .document::before,
@@ -309,6 +303,7 @@
                 display: none !important;
             }
 
+            /* ✅ نفس إعدادات الوجه الأمامي لضمان التطابق التام */
             .cards-grid {
                 display: grid !important;
                 grid-template-columns: repeat(2, 120.6mm) !important;
@@ -345,6 +340,31 @@
                 box-shadow: none !important;
             }
 
+            .flag-decoration-back svg rect,
+            .back-header,
+            .back-title,
+            .signature-label,
+            .notes-title {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+            }
+
+            .row,
+            .col-lg-12,
+            .col-md-12,
+            .card {
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+
             .btn-group,
             .breadcrumb-header,
             .card-header,
@@ -371,31 +391,6 @@
                 width: 0 !important;
                 margin: 0 !important;
                 padding: 0 !important;
-            }
-
-            .flag-decoration-back svg rect,
-            .back-header,
-            .back-title,
-            .signature-label,
-            .notes-title {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color-adjust: exact !important;
-            }
-
-            * {
-                box-shadow: none !important;
-                text-shadow: none !important;
-            }
-
-            .row,
-            .col-lg-12,
-            .col-md-12,
-            .card {
-                margin: 0 !important;
-                padding: 0 !important;
-                box-shadow: none !important;
-                border: none !important;
             }
         }
 
@@ -457,86 +452,88 @@
                         @endphp
 
                         <div class="cards-grid">
-                            @foreach ($group->reverse() as $employee)
-                                <div class="card-container-back">
-                                    @if (isset($employee->MATRI))
-                                        <!-- ================== بطاقة الموظف ================== -->
-                                        <!-- زخرفة العلم -->
-                                        <div class="flag-decoration-back">
-                                            <svg width="100%" height="100%" viewBox="0 0 300 100"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="0" y="0" width="200" height="20" fill="#006e2e"
-                                                    transform="rotate(-45 0 0)" />
-                                                <rect x="0" y="20" width="200" height="20" fill="#d50000"
-                                                    transform="rotate(-45 0 0)" />
-                                            </svg>
-                                        </div>
-
-                                        <!-- رأس البطاقة -->
-                                        <div class="back-header d-flex justify-content-between align-items-center">
-                                            <div class="dz-logo left-logo">
-                                                <img src="{{ asset('assets/img/brand/Algeria.png') }}" alt="DZ Logo Left">
+                            @foreach ($group->chunk(2) as $row)
+                                {{-- نقلب ترتيب الأعمدة داخل كل صف --}}
+                                @foreach ($row->reverse() as $employee)
+                                    <div class="card-container-back">
+                                        @if (isset($employee->MATRI))
+                                            <!-- ================== بطاقة الموظف ================== -->
+                                            <div class="flag-decoration-back">
+                                                <svg width="100%" height="100%" viewBox="0 0 300 100"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0" y="0" width="200" height="20" fill="#006e2e"
+                                                        transform="rotate(-45 0 0)" />
+                                                    <rect x="0" y="20" width="200" height="20" fill="#d50000"
+                                                        transform="rotate(-45 0 0)" />
+                                                </svg>
                                             </div>
 
-                                            <div class="back-subtitle text-center flex-grow-1">
-                                                IDDZA{{ $employee->MATRI ?? '' }}
-                                                >>> {{ $employee->NOM ?? '' }}
-                                                <<< {{ $employee->PRENOM ?? '' }}
-                                                <<< {{ $employee->DATNAIS ? \Carbon\Carbon::parse($employee->DATNAIS)->format('Ymd') : '' }}
-                                                <<<<
-                                            </div>
-
-                                            <div class="dz-logo right-logo"></div>
-                                        </div>
-
-                                        <!-- محتوى البطاقة -->
-                                        <div class="back-content">
-                                            <div class="notes-section">
-                                                <div class="notes-title">ملاحظات هامة</div>
-                                                <div class="notes-content">
-                                                    <div class="note-item">هذه البطاقة صالحة لمدة 10 سنوات</div>
-                                                    <div class="note-item">يمنع استعمال هذه البطاقة من طرف الغير</div>
-                                                    <div class="note-item">في حالة الضياع أو السرقة يجب التبليغ فورا</div>
+                                            <div class="back-header d-flex justify-content-between align-items-center">
+                                                <div class="dz-logo left-logo">
+                                                    <img src="{{ asset('assets/img/brand/Algeria.png') }}"
+                                                        alt="DZ Logo Left">
                                                 </div>
-                                            </div>
 
-                                            <div class="watermark-logo">
-                                                <img src="{{ asset('assets/img/brand/logo57.png') }}" alt="Watermark">
-                                            </div>
-                                        </div>
+                                                <div class="back-subtitle text-center flex-grow-1">
+                                                    IDDZA{{ $employee->MATRI ?? '' }}
+                                                    >>> {{ $employee->NOM ?? '' }}
+                                                    <<< {{ $employee->PRENOM ?? '' }} <<<
+                                                        {{ $employee->DATNAIS ? \Carbon\Carbon::parse($employee->DATNAIS)->format('Ymd') : '' }}
+                                                        <<<< </div>
 
-                                        <!-- تذييل البطاقة -->
-                                        <div class="back-footer">
-                                            <div class="footer-info">
-                                                <div class="footer-contact">
-                                                    <div class="contact-item">
-                                                        <i class="fas fa-phone contact-icon"></i>
-                                                        <span>032.XX.XX.XX</span>
+                                                        <div class="dz-logo right-logo"></div>
+                                                </div>
+
+                                                <div class="back-content">
+                                                    <div class="notes-section">
+                                                        <div class="notes-title">ملاحظات هامة</div>
+                                                        <div class="notes-content">
+                                                            <div class="note-item">هذه البطاقة صالحة لمدة 10 سنوات</div>
+                                                            <div class="note-item">يمنع استعمال هذه البطاقة من طرف الغير
+                                                            </div>
+                                                            <div class="note-item">في حالة الضياع أو السرقة يجب التبليغ فورا
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="contact-item">
-                                                        <i class="fas fa-envelope contact-icon"></i>
-                                                        <span>elmeghaier@education.dz</span>
+
+                                                    <div class="watermark-logo">
+                                                        <img src="{{ asset('assets/img/brand/logo57.png') }}"
+                                                            alt="Watermark">
                                                     </div>
                                                 </div>
-                                                <div class="validity-info">
-                                                    تاربخ الإصدار: {{ now()->format('Y/m/d') }}
+
+                                                <div class="back-footer">
+                                                    <div class="footer-info">
+                                                        <div class="footer-contact">
+                                                            <div class="contact-item">
+                                                                <i class="fas fa-phone contact-icon"></i>
+                                                                <span>032.XX.XX.XX</span>
+                                                            </div>
+                                                            <div class="contact-item">
+                                                                <i class="fas fa-envelope contact-icon"></i>
+                                                                <span>elmeghaier@education.dz</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="validity-info">
+                                                            تاربخ الإصدار: {{ now()->format('Y/m/d') }}
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    @else
-                                        <!-- ================== بطاقة فارغة ================== -->
-                                        <div class="back-content"
-                                            style="border: 1px dashed #ccc; opacity: 0.3; display: flex; justify-content: center; align-items: center; height: 100%;">
-                                            <span>بطاقة فارغة لتكملة الصفحة</span>
-                                        </div>
-                                    @endif
-                                </div>
+                                            @else
+                                                <div class="back-content"
+                                                    style="border: 1px dashed #ccc; opacity: 0.3; display: flex; justify-content: center; align-items: center; height: 100%;">
+                                                    <span>بطاقة فارغة لتكملة الصفحة</span>
+                                                </div>
+                                        @endif
+                                    </div>
+                                @endforeach
                             @endforeach
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection
 

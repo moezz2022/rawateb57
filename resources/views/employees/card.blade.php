@@ -115,24 +115,6 @@
             opacity: 1;
         }
 
-        .watermark-logo {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.2;
-            width: 60mm;
-            height: 60mm;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .watermark-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
         .card-type {
             font-size: 18pt;
             font-weight: 700;
@@ -285,6 +267,221 @@
             animation: blinker 2s linear infinite;
         }
 
+        /* حاوية البطاقة */
+        .card-container-back {
+            width: 120.6mm;
+            height: 75mm;
+            background: #ffffff;
+            border: 2px solid #006233;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* زخرفة العلم الجزائري - في الزاوية اليمنى العلوية */
+        .flag-decoration-back {
+            position: absolute;
+            top: 0;
+            left: -6mm;
+            width: 55mm;
+            height: 55mm;
+            overflow: hidden;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .flag-decoration-back svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        /* رأس البطاقة الخلفية */
+        .back-header {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .dz-logo {
+            width: 55mm;
+            height: auto;
+        }
+
+        .dz-logo img {
+            width: 55mm;
+            height: auto;
+            object-fit: contain;
+            opacity: 2;
+            /* شفافية بسيطة حتى لا تطغى على اللون */
+        }
+
+        .left-logo {
+            order: 1;
+        }
+
+        .back-subtitle {
+            order: 2;
+            font-size: 11pt;
+            font-weight: 100;
+            text-align: center;
+            color: #575757;
+            flex-grow: 1;
+            margin: 0 5mm;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .right-logo {
+            order: 3;
+        }
+
+
+        /* محتوى البطاقة الخلفية */
+        .back-content {
+            flex: 1;
+            padding: 3mm 4mm;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* قسم الملاحظات */
+        .notes-section {
+            margin-bottom: 3mm;
+        }
+
+        .notes-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #006233;
+            margin-bottom: 1.5mm;
+            border-right: 3px solid #d52b1e;
+            padding-right: 2mm;
+        }
+
+        .notes-content {
+            background: #f9f9f9;
+            padding: 2mm;
+            border-radius: 4px;
+            min-height: 15mm;
+            border: 1px solid #ddd;
+        }
+
+        .note-item {
+            font-size: 9pt;
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 1mm;
+            padding-right: 3mm;
+            position: relative;
+        }
+
+        .note-item:before {
+            content: "•";
+            position: absolute;
+            right: 0;
+            color: #006233;
+            font-weight: bold;
+        }
+
+        /* قسم معلومات الطوارئ */
+        .emergency-section {
+            background: #fff9f0;
+            border: 1px solid #ffb84d;
+            border-radius: 4px;
+            padding: 2mm;
+            margin-bottom: 2mm;
+        }
+
+        .emergency-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #d52b1e;
+            margin-bottom: 1mm;
+        }
+
+        .emergency-info {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1mm 2mm;
+            font-size: 9pt;
+        }
+
+        .emergency-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .emergency-value {
+            color: #666;
+            border-bottom: 0.5pt dotted #ccc;
+        }
+
+        /* تذييل البطاقة الخلفية */
+        .back-footer {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(to top, #f5f5f5, white);
+            padding: 0mm 3mm;
+            border-top: 2px solid #006233;
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 8pt;
+            color: #666;
+        }
+
+        .footer-contact {
+            display: flex;
+            gap: 3mm;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1mm;
+        }
+
+        .contact-icon {
+            color: #006233;
+            font-size: 10pt;
+        }
+
+        .validity-info {
+            text-align: left;
+            font-weight: 600;
+            color: #d52b1e;
+        }
+
+        /* الشعار الصغير في الخلفية */
+        .watermark-logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+            width: 60mm;
+            height: 60mm;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .watermark-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         @keyframes blinker {
             50% {
                 opacity: 0;
@@ -303,42 +500,30 @@
         /* ============================================ */
         /* إعدادات الطباعة - الحل النهائي */
         /* ============================================ */
-
+        /********************************** تنسيق طباعة الوجه الأمامي ******************************************/
         @media print {
-
-            /* إعدادات الصفحة */
             @page {
                 size: A4 portrait;
                 margin: 10mm 15mm 0 0 !important;
             }
 
-            /* إزالة جميع الهوامش والحشوات */
             * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
 
-            html {
-                margin: 0 !important;
-                padding: 0 !important;
-                width: 210mm;
-                height: 297mm;
-            }
-
+            html,
             body {
                 margin: 0 !important;
                 padding: 0 !important;
                 background: #fff !important;
-                width: 210mm;
-                min-height: 297mm;
             }
 
-            /* ✅ الحل الرئيسي: إزالة الصفحة الفارغة الأولى */
             .document {
                 margin: 0 !important;
                 padding: 0 !important;
-                background: #fff !important;
                 width: 100% !important;
+                background: #fff !important;
                 align-items: center !important;
             }
 
@@ -348,7 +533,7 @@
                 display: none !important;
             }
 
-            /* شبكة البطاقات */
+            /* ✅ شبكة البطاقات (الأمامية) */
             .cards-grid {
                 display: grid !important;
                 grid-template-columns: repeat(2, 120.6mm) !important;
@@ -363,7 +548,6 @@
                 background: #fff !important;
             }
 
-            /* أول شبكة تبدأ من أعلى الصفحة بدون فراغ */
             .cards-grid:first-child {
                 margin-top: 0 !important;
                 padding-top: 2mm !important;
@@ -371,7 +555,6 @@
                 break-before: avoid !important;
             }
 
-            /* باقي الشبكات تبدأ من صفحة جديدة */
             .cards-grid:not(:first-child) {
                 page-break-before: always !important;
                 break-before: page !important;
@@ -379,7 +562,6 @@
                 padding-top: 2mm !important;
             }
 
-            /* البطاقات */
             .card-container {
                 width: 120.6mm !important;
                 height: 75mm !important;
@@ -388,7 +570,7 @@
                 box-shadow: none !important;
             }
 
-            /* إخفاء عناصر الواجهة */
+            /* إخفاء العناصر الزائدة */
             .btn-group,
             .breadcrumb-header,
             .card-header,
@@ -419,21 +601,11 @@
                 padding: 0 !important;
             }
 
-            /* التأكد من ظهور الألوان */
-            .flag-decoration svg rect,
-            .card-type {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color-adjust: exact !important;
-            }
-
-            /* إزالة الظلال في الطباعة */
             * {
                 box-shadow: none !important;
                 text-shadow: none !important;
             }
 
-            /* التأكد من عدم وجود مسافات إضافية */
             .row,
             .col-lg-12,
             .col-md-12,
@@ -444,6 +616,7 @@
                 border: none !important;
             }
         }
+
 
         /* إعدادات الشاشة */
         @media screen {
@@ -496,7 +669,6 @@
                 <div class="document">
                     @foreach ($employees->chunk(10) as $group)
                         @php
-                            // إذا كان عدد البطاقات في الصفحة فردي نضيف بطاقة فارغة لتكملة العدد
                             if ($group->count() % 2 != 0) {
                                 $group->push((object) []);
                             }
@@ -535,11 +707,6 @@
 
                                         <!-- نوع البطاقة -->
                                         <div class="card-type">بطاقة مهنية</div>
-
-                                        <div class="watermark-logo">
-                                            <img src="{{ asset('assets/img/brand/logo57.png') }}" alt="Watermark">
-                                        </div>
-
                                         <!-- المحتوى -->
                                         <div class="content">
                                             <div class="info-section">
@@ -586,13 +753,13 @@
                                         <div class="page-footer">
                                             <div class="barcode-section">
                                                 @if (isset($employee->MATRI) && isset($employee->CLECPT))
-                                                    <img src="data:image/png;base64,{{ DNS1D::getBarcodePNG('00799999000' . $employee->MATRI . $employee->CLECPT, 'C128', 1.5, 40) }}"
+                                                    <img src="data:image/png;base64,{{ DNS1D::getBarcodePNG($employee->MATRI, 'C128', 1.5, 40) }}"
                                                         alt="Barcode" />
                                                 @endif
                                             </div>
                                             <div class="qr-code">
-                                                @if (isset($employee->MATRI) && isset($employee->CLECPT))
-                                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ urlencode('00799999000' . $employee->MATRI . $employee->CLECPT) }}"
+                                                @if (isset($employee->MATRI))
+                                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ urlencode( $employee->MATRI) }}"
                                                         alt="QR Code" />
                                                 @endif
                                             </div>
@@ -608,12 +775,102 @@
                             @endforeach
                         </div>
                     @endforeach
+
+                    @foreach ($employees->chunk(10) as $group)
+                        @php
+                            // إذا كان عدد البطاقات فردي نضيف بطاقة فارغة لتكملة الصفحة
+                            if ($group->count() % 2 != 0) {
+                                $group->push((object) []);
+                            }
+                        @endphp
+
+                        <div class="cards-grid">
+                            @foreach ($group->chunk(2) as $row)
+                                {{-- نقلب ترتيب الأعمدة داخل كل صف --}}
+                                @foreach ($row->reverse() as $employee)
+                                    <div class="card-container-back">
+                                        @if (isset($employee->MATRI))
+                                            <!-- ================== بطاقة الموظف ================== -->
+                                            <div class="flag-decoration-back">
+                                                <svg width="100%" height="100%" viewBox="0 0 300 100"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0" y="0" width="200" height="20" fill="#006e2e"
+                                                        transform="rotate(-45 0 0)" />
+                                                    <rect x="0" y="20" width="200" height="20" fill="#d50000"
+                                                        transform="rotate(-45 0 0)" />
+                                                </svg>
+                                            </div>
+
+                                            <div class="back-header d-flex justify-content-between align-items-center">
+                                                <div class="dz-logo left-logo">
+                                                    <img src="{{ asset('assets/img/brand/Algeria.png') }}"
+                                                        alt="DZ Logo Left">
+                                                </div>
+
+                                                <div class="back-subtitle text-center flex-grow-1">
+                                                    IDDZA{{ $employee->MATRI ?? '' }}
+                                                    >>> {{ $employee->NOM ?? '' }}
+                                                    <<< {{ $employee->PRENOM ?? '' }} <<<
+                                                        {{ $employee->DATNAIS ? \Carbon\Carbon::parse($employee->DATNAIS)->format('Ymd') : '' }}
+                                                        <<<< </div>
+
+                                                        <div class="dz-logo right-logo"></div>
+                                                </div>
+
+                                                <div class="back-content">
+                                                    <div class="notes-section">
+                                                        <div class="notes-title">ملاحظات هامة</div>
+                                                        <div class="notes-content">
+                                                            <div class="note-item">هذه البطاقة صالحة لمدة 10 سنوات</div>
+                                                            <div class="note-item">يمنع استعمال هذه البطاقة من طرف الغير
+                                                            </div>
+                                                            <div class="note-item">في حالة الضياع أو السرقة يجب التبليغ
+                                                                فورا
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="watermark-logo">
+                                                        <img src="{{ asset('assets/img/brand/logo57.png') }}"
+                                                            alt="Watermark">
+                                                    </div>
+                                                </div>
+
+                                                <div class="back-footer">
+                                                    <div class="footer-info">
+                                                        <div class="footer-contact">
+                                                            <div class="contact-item">
+                                                                <i class="fas fa-phone contact-icon"></i>
+                                                                <span>032.XX.XX.XX</span>
+                                                            </div>
+                                                            <div class="contact-item">
+                                                                <i class="fas fa-envelope contact-icon"></i>
+                                                                <span>elmeghaier@education.dz</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="validity-info">
+                                                            تاربخ الإصدار: {{ now()->format('Y/m/d') }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @else
+                                                <div class="back-content"
+                                                    style="border: 1px dashed #ccc; opacity: 0.3; display: flex; justify-content: center; align-items: center; height: 100%;">
+                                                    <span>بطاقة فارغة لتكملة الصفحة</span>
+                                                </div>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            @endforeach
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    </div>
 @endsection
-
 @section('js')
     <script>
         window.previewImage = function(event, id) {
@@ -623,9 +880,7 @@
                     alert('الرجاء اختيار صورة فقط');
                     return;
                 }
-
                 const reader = new FileReader();
-
                 reader.onload = function(e) {
                     const photoDiv = document.getElementById(`photo-container-${id}`);
                     if (!photoDiv) return;
@@ -640,7 +895,6 @@
                         img.alt = 'صورة الموظف';
                         photoDiv.prepend(img);
                     }
-
                     img.style.cssText = `
                 position: absolute !important;
                 top: 0 !important;
@@ -652,7 +906,6 @@
                 display: block !important;
                 opacity: 1 !important;
             `;
-
                     img.src = e.target.result;
                 };
 
@@ -661,12 +914,10 @@
                 alert('حدث خطأ أثناء تحميل الصورة');
             }
         };
-
         window.uploadImage = function(id) {
             const fileInput = document.getElementById(`file-input-${id}`);
             if (fileInput) fileInput.click();
         };
-
         window.makeEditable = function(icon) {
             const span = icon.parentElement.querySelector(".info-value");
             if (!span) return;
@@ -684,21 +935,17 @@
         font-family: inherit;
         direction: rtl;
     `;
-
             input.addEventListener("blur", function() {
                 span.innerText = input.value.trim();
                 input.replaceWith(span);
             });
-
             input.addEventListener("keypress", function(e) {
                 if (e.key === "Enter") input.blur();
             });
-
             span.replaceWith(input);
             input.focus();
             input.select();
         };
-
         document.addEventListener('DOMContentLoaded', function() {
             const fileInputs = document.querySelectorAll('[id^="file-input-"]');
             fileInputs.forEach(function(input) {

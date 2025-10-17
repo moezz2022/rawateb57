@@ -91,6 +91,9 @@
                             <li><a class="slide-item" href="{{ route('employees.index') }}"><i
                                         class="fa-solid fa-users"></i>
                                     قائمة الموظفين</a></li>
+                            <li><a class="slide-item" href="{{ route('attendance.records') }}"><i
+                                        class="fa-solid fa-users"></i>
+                                    حضور وانصراف</a></li>
                             <li><a class="slide-item" href="{{ route('users.transfer') }}"><i
                                         class="fa-solid fa-exchange-alt"></i> التحويلات</a></li>
                         @endif

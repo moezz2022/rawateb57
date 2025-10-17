@@ -119,19 +119,6 @@
                                 </select>
                             </div>
 
-                            <div class="col-md-3">
-                                <label class="form-label fw-bold">
-                                    <i class="fas fa-list-ol text-info ml-1"></i> عدد البطاقات/صفحة:
-                                </label>
-                                <select name="per_page" class="form-control form-control-lg">
-                                    <option value="8" {{ isset($perPage) && $perPage == 8 ? 'selected' : '' }}>8
-                                    </option>
-                                    <option value="10" {{ isset($perPage) && $perPage == 10 ? 'selected' : '' }}>10
-                                    </option>
-                                    <option value="12" {{ isset($perPage) && $perPage == 12 ? 'selected' : '' }}>12
-                                    </option>
-                                </select>
-                            </div>
 
                             <div class="col-md-3 d-flex align-items-end">
                                 <button type="submit" class="btn btn-success btn-lg w-100">
@@ -209,7 +196,7 @@
                         <div class="alert alert-info text-center">
                             <i class="fas fa-info-circle fa-2x mb-3"></i>
                             <h5>قم باختيار الرتبة لعرض الموظفين</h5>
-                            <p class="mb-0">اختر الرتبة وعدد البطاقات المطلوبة ثم اضغط على "عرض الموظفين"</p>
+                            <p class="mb-0">اختر الرتبة ثم اضغط على "عرض الموظفين"</p>
                         </div>
                     @endisset
 
