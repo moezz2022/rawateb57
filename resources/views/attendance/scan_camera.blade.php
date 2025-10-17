@@ -381,12 +381,11 @@
                 </div>
             </div>
         </div>
-
-        <!-- Right Side: Log & Settings -->
-        <div class="col-lg-4 mb-4">
-            <!-- Session Log -->
-            <div class="card mb-3">
-                <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+    <!-- Right Side: Log & Settings -->
+    <div class="col-lg-4 mb-4">
+        <!-- Session Log -->
+        <div class="card mb-3">
+            <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
                     <h6 class="mb-0">
                         <i class="bi bi-clock-history"></i> سجل المسح
                     </h6>
